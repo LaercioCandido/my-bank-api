@@ -29,7 +29,7 @@ global.logger = winston.createLogger({
 
 const app = express();
 app.use(express.json());
-app.use(cors); //define exposição de todos os endpoints em todos os domínios
+app.use(cors()); //define exposição de todos os endpoints em todos os domínios
 app.use(express.static("public"));
 app.use("/doc", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use("/account", accountsRouter);
