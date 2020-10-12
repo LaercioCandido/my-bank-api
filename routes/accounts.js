@@ -7,7 +7,6 @@ const { readFile, writeFile } = fs;
 const router = express.Router();
 
 router.post("/", async (req, res, next) => {
-	let account = req.body;
 	try {
 		let account = req.body;
 
